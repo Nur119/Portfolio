@@ -1,0 +1,424 @@
+/* Utilities */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Section */
+
+#navbar {
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it's above other content */
+    transition: all .5s ease-in;
+
+}
+
+#navbar .logo {
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#navbar .menu {
+
+    padding: 10px;
+}
+
+#navbar .menu ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#navbar .menu ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: all .5s ease;
+    border-radius: 50px;
+    margin: 0 10px;
+}
+
+#navbar .menu ul li a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.mobile-nav {
+    display: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.show-nav {
+
+
+    right: 0 !important;
+
+}
+
+/* Home Section */
+#home {
+    background-image: url(../images/banner-bg.jpg);
+    background-attachment: fixed;
+        background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 200px 0;
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+
+#home .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profile-pic {
+    width: 400px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+.text-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#hire-btn {
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #333;
+    font-size: 1.1rem;
+    border-radius: 100PX;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.btn:hover,
+#hire-btn:hover {
+    background-color: black;
+
+}
+
+/* Two Column Section */
+#two-column {
+    display: flex;
+    padding: 10px;
+}
+
+#about h2,
+#blog h2 {
+    margin-top: 50px;
+    text-align: center;
+
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #555;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* Blog Section */
+#blog {
+    width: 50%;
+
+}
+
+#blog .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    border: #555 solid 3px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 200px;
+    scale: 1.2;
+
+}
+.card-img {
+transition: all .5s ;
+
+}
+.card-img:hover{
+    transform: scale(1.5);
+}
+.card-text{
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    padding: 10px 0;
+    left: 0;
+    bottom: 0;
+}
+
+/* About Me Section */
+#about {
+    background-color: #f9f9f9;
+    width: 50%;
+    color: #333;
+    text-align: center;
+
+}
+
+#about .container {
+
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 50px;
+
+}
+
+
+
+
+#about h2::after,
+#blog h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #555;
+}
+
+#about p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+
+
+#about .facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#about .fact {
+    padding: 20px;
+}
+
+#about .fact h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#about .fact p {
+    font-size: 16px;
+}
+
+/* Contact Me Section */
+#contact {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #555;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #555;
+}
+
+.contact-form {
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.form-group button {
+    padding: 10px 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-group button:hover {
+    background-color: #555;
+}
+
+.contact-info {
+    margin-bottom: 50px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ccc;
+}
